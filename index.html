@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP804 Assignment</title>
+    <style>
+      .centered-heading {
+    text-align: center;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Styles for each task container */
+
+        .task-container {
+            text-align: center;
+            border: 1px solid #aaa;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 70%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            width: 100%;
+            padding: 10px;
+            color: darkblue;
+            border-bottom: 1px solid lightgray;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h2 {
+            font-size: 1.3em;
+        }
+
+        h3 {
+            font-size: 1.1em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Task 2 styles */
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-right: 1px solid white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+            font-style: italic;
+            color: #333;
+            border-bottom: 1px dotted darkblue;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e6e6e6;
+            font-weight: bold;
+            color: darkred;
+            border-bottom: 1px dashed darkred;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        td:last-child {
+            border-right: none;
+        }
+            /* Task 2 styles */
+            table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid black;
+    vertical-align: top;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.btn {
+          margin: 10px;
+          padding: 10px 20px;
+          cursor: pointer;
+      }
+
+      .btn.active {
+          background-color: #007BFF;
+          color: white;
+      }
+
+      #imageDisplay {
+          margin-top: 20px;
+          display: none;
+      }
+    </style>
+    <script>
+        function displayAnimal(animal) {
+            document.getElementById('messageField').value = `User clicks ${animal}`;
+            document.getElementById('textDisplay').innerText = `${animal} is clicked`;
+            document.getElementById('imageDisplay').src = `${animal.toLowerCase()}.jpg`;
+            document.getElementById('imageDisplay').style.display = 'block';
+            
+
+            document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+
+
+            document.getElementById(`${animal}Button`).classList.add('active');
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Task 1 Container -->
+    <div class="task-container">
+        <h1>Task 1</h1>
+        <h2>8476676 Muhammad Asif</h2>
+        <h3>COMP804: Web Security</h3>
+        <h4>Assignment 1, due at the end of Week 5</h4>
+    </div>
+
+    <!-- Task 2 Container -->
+    <div class="container">
+        <h2 class="centered-heading">Task 2</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First day to enrol for re-enrolling (continuing students)</td>
+                    <td>21 Nov 2022</td>
+                </tr>
+                <tr>
+                    <td>Orientation</td>
+                    <td>18 Jul 2023</td>
+                </tr>
+                <tr>
+                    <td>Lectures Commence (weeks 1-9)</td>
+                    <td>24 Jul - 22 Sep 2023</td>
+                </tr>
+                <tr>
+                    <td>Last day to enrol / add subjects yourself</td>
+                    <td>04 Aug 2023</td>
+                </tr>
+                <tr>
+                    <td>Last day to enrol add subjects with Head of Students approval</td>
+                    <td>Nl Aug 2023</td>
+                </tr>
+                <tr>
+                    <td>
+                        CENSUS DATE <br>
+                        = Fees due <br>
+                        ® Last day to withdraw from subject/s without paying for them <br>
+                        ® HECS/FEE HELP debt reporting date <br>
+                        ® Last day to change HECS / FEE HELP billing option <br>
+                        <a href="https://www.uow.edu.au/student/dates/#d.en.187570">Learn more about Census date ></a>
+                    </td>
+                    <td>31 Aug 2023</td>
+                </tr>
+                <tr>
+                    <td>Student Services and Amenities Fees Due</td>
+                    <td>01 Sep 2023</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Task 3 Container -->
+    <div class="task-container">
+        <h1>Task 3</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Web Attacks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        SQL Injection<br>
+                        <img src="sql.jpg" alt="SQL Injection" width="100">
+                        <p><a href="https://owasp.org/www-community/attacks/SQL_Injection">Source: SQL Injection</a></p>
+                    </td>
+                    <td>
+                        An attack technique where malicious SQL code is inserted into input fields to manipulate or query the database directly. This can lead to unauthorized data access<br>
+                        <a href="https://owasp.org/www-community/attacks/SQL_Injection">Source SQL_Injection Details</a>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        Cross-Site Scripting<br>
+                        <img src="cross.png" alt="Cross-Site Scripting" width="100">
+                        <p><a href="https://blog.hubspot.com/website/cross-site-scripting">Source: Cross Site Scripting</a></p>
+                    </td>
+                    <td>
+                        Attackers inject malicious scripts into web pages viewed by users. The script can then be used to steal information or perform actions on behalf of the user.<br>
+                        <a href="https://websitesecuritystore.com">Source: Cross Site Scripting Details</a>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        Distributed Denial of Service (DDoS)<br>
+                        <img src="ddos.png" alt="DDoS" width="100">
+                        <p><a href="https://www.radware.com/cyberpedia/ddospedia/ddos-meaning-what-is-ddos-attack/">Source: DDoS</a></p>
+                    </td>
+                    <td>
+                        Overwhelming a system with a flood of traffic, rendering it unavailable to legitimate users.<br>
+                        <a href="https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/">Source: DDoS Details</a>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        Man-in-the-Middle (MitM) Attack<br>
+                        <img src="man.png" alt="MitM Attack" width="100">
+                        <p><a href="https://beaglesecurity.com/blog/article/man-in-the-middle-attack.html">Source: MitM Attack</a></p>
+                    </td>
+                    <td>
+                        An attacker secretly intercepts and potentially alters the communication between two parties to steal information or inject malicious content.<br>
+                        <a href="https://www.itgovernance.eu/blog/en/how-to-defend-against-man-in-the-middle-attacks">Source: MitM Attack Details</a>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        Session Hijacking<br>
+                        <img src="session.jpg" alt="Session Hijacking" width="100">
+                        <p><a href="https://www.thesslstore.com/blog/the-ultimate-guide-to-session-hijacking-aka-cookie-hijacking/">Source: Session Hijacking</a></p>
+                    </td>
+                    <td>
+                        An attacker exploits a valid session ID to gain unauthorized access to a web application, allowing them to impersonate the victimized user.<br>
+                        <a href="https://owasp.org/www-community/attacks/Session_hijacking_attack">Source: Session Hijacking Details</a>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        XML External Entity (XXE)<br>
+                        <img src="xxe.png" alt="XXE" width="100">
+                        <p><a href="https://securitysouls.com/what-are-xxexml-external-entity-attacks/">Source: XXE</a></p>
+                    </td>
+                    <td>
+                        An attack where an attacker can exploit vulnerable XML processors to execute arbitrary code, access local files, or perform other malicious activities.<br>
+                        <a href="https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing">Source: XXE Details</a>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        Remote File Inclusion (RFI)<br>
+                        <img src="rfi.jpg" alt="RFI" width="100">
+                        <p><a href="https://www.wallarm.com/what/what-is-remote-file-inclusion-rfi">Source: RFI</a></p>
+                    </td>
+                    <td>
+                        An attacker uses this technique to include remote files, typically through manipulating input data. This can allow for code execution on the server.<br>
+                        <a href="https://www.imperva.com/learn/application-security/rfi-remote-file-inclusion/">Source: RFI Details</a>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        Clickjacking<br>
+                        <img src="click.png" alt="Clickjacking" width="100">
+                        <p><a href="https://www.wallarm.com/what/what-is-clickjacking">Source: Clickjacking</a></p>
+                    </td>
+                    <td>
+                        A malicious technique of tricking a user into clicking on something different from what the user perceives. This can be used to steal information or take control of actions.<br>
+                        <a href="https://owasp.org/www-community/attacks/Clickjacking">Source: Clickjacking Details</a>
+                    </td>
+                </tr>
+        
+            </tbody>
+        </table>        
+    </div>
+
+    <!-- Task 4 Container -->
+    <div class="task-container">
+        <h1>Task 4</h1>
+        <button id="CatButton" class="btn" onclick="displayAnimal('Cat')">Cat</button>
+        <button id="DogButton" class="btn" onclick="displayAnimal('Dog')">Dog</button>
+        <button id="FrogButton" class="btn" onclick="displayAnimal('Frog')">Frog</button>
+        <br>
+        <input type="text" id="messageField" readonly>
+        <p id="textDisplay"></p>
+        <img id="imageDisplay" alt="Animal Image" width="200">
+    </div>
+
+    <!-- Task 5 Container -->
+    <div class="task-container">
+        <h1>Task 5</h1>
+        <p>
+            GitHub repository has been created to store the website from Tasks 1-4. 
+            Git commands have been used to upload the website to the repository.
+            Screenshots and details of each successful step can be found in the report.
+        </p>
+        <a href="https://github.com/masifazmat/ASSESSMENTTASK3.git">Link to GitHub repository</a>
+        <p>
+        </p>
+        <a href="report.html">Link to the report page</a>
+    </div>
+</body>
+
+</html>
